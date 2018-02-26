@@ -16,6 +16,10 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 	switch r.URL.Path {
 	case "/":
 		content = "../pages/index.html"
+	case "/atomic-host":
+		content = "../pages/atomic-host/index.html"
+	case "/atomic-ws":
+		content = "../pages/atomic-ws/index.html"
 	case "/blog":
 		content = "../pages/blog/index.html"
 	case "/community":
@@ -28,6 +32,8 @@ func templateHandler(w http.ResponseWriter, r *http.Request) {
 		content = "../pages/download/index.html"
 	case "/talks":
 		content ="../pages/talks/index.html"
+	case "/tools":
+		content = "../pages/tools/index.html"
 	default:
 		content = "../pages/" + r.URL.Path + ".html"
 	}

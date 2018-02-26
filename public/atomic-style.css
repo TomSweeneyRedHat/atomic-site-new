@@ -27,6 +27,15 @@ a {
   color: #1b202a;
 }
 
+svg {
+  display: inline-block;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
 hr {
   margin: 0;
   border: 1px #46d200 solid;
@@ -35,8 +44,8 @@ hr {
 pre, code {
   background: #1b202a;
   color: white;
-  font-family: 'Overpass Mono', monospace; 
-  font-size: 80%; 
+  font-family: 'Overpass Mono', monospace;
+  font-size: 80%;
   vertical-align: middle;
   padding: 1px 0.5rem;
 }
@@ -68,7 +77,6 @@ header nav {
 header nav a {
   display: block;
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
   padding: 0.2rem 0;
 }
 header nav a:hover {
@@ -90,9 +98,10 @@ main article {
   padding: 1rem;
 }
 
-main article h1 {
+h1 {
   font-size: 210%;
   font-weight: 700;
+  text-align: center;
 }
 
 main article a {
@@ -111,7 +120,7 @@ main article a::before, main article ul.taglist li a::before {
 
 main article h1 a::before, main article h2 a::before, main article h3 a::before, main article h4 a::before, main article h5 a::before, main article li a::before {
   content: "";
-} 
+}
 
 main article a:hover::before {
   color: #1b202a;
@@ -192,21 +201,21 @@ footer #copywrite {
     grid-template-columns: 220px 1fr;
     align-items: center;
   }
-  
+
   header nav {
     margin-top: 0;
   }
 }
- 
+
 @media (min-width: 680px) {
   header {
     display: block;
   }
-  
+
   header nav {
     margin-top: 1rem;
   }
-  
+
   .wrapper {
     margin: 1rem;
     grid-template-columns: 220px 1fr;
