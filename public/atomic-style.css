@@ -193,7 +193,7 @@ footer nav {
 footer nav a {
   color: white;
 }
-footer nav a:hover, svg:hover {
+footer nav a:hover, footer nav a:hover svg.icon {
   color: #46d200;
   fill: #46d200;
 }
