@@ -8,7 +8,9 @@ html {
 
 body {
   font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  background: #1b202a url(/public/images/bckgd.png) repeat top center;
+  background: #0c0e13 url(/public/images/bckgd.png);
+  background-size: cover;
+  background-attachment: fixed;
   color: white;
   margin: 5px;
 }
@@ -24,25 +26,24 @@ div.wrapper > * {
 a {
   font-weight: 900;
   text-decoration: none;
-  color: #1b202a;
+  color: #0c0e13;
 }
 
 svg {
   display: inline-block;
-}
-
-.icon {
-  width: 1em;
-  height: 1em;
+  width: 2.2em;
+  height: 2.2em;
+  padding: 0.1em 0.5em;
+  vertical-align: middle;
 }
 
 hr {
   margin: 0;
-  border: 1px #46d200 solid;
+  border: 1px #0c0e13 solid;
 }
 
 pre, code {
-  background: #1b202a;
+  background: #0c0e13;
   color: white;
   font-family: 'Overpass Mono', monospace;
   font-size: 80%;
@@ -70,30 +71,31 @@ header {
   grid-row: span 2;
 }
 
+header svg {
+  fill: #0c0e13;
+}
+
 header nav {
   margin-top: 1rem;
 }
 
 header nav a {
   display: block;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 0.2rem 0;
 }
 header nav a:hover {
   transition: background-color 0.2s ease-in;
-  color: white;
   background: #46d200;
 }
 header #atomic-logo {
   margin: 0 auto;
-  width: 200px;
-  height: 200px;
 }
 
 main article {
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.8);
-  color: #1b202a;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0c0e13;
   margin: 1rem 0;
   padding: 1rem;
 }
@@ -109,12 +111,12 @@ main article a {
 }
 
 main article a:hover {
-  border-color: #1b202a;
+  border-color: #0c0e13;
 }
 
 main article a::before, main article ul.taglist li a::before {
   font-size: 0.7rem;
-  content: "\25a0\00a0";
+  content: "\2192";
   color: #46d200;
 }
 
@@ -123,7 +125,7 @@ main article h1 a::before, main article h2 a::before, main article h3 a::before,
 }
 
 main article a:hover::before {
-  color: #1b202a;
+  color: #0c0e13;
   transition: color 300ms ease-in;
 }
 
@@ -135,19 +137,19 @@ main article.archive a {
 }
 
 main article.archive a:hover {
-  text-decoration-color: #1b202a;
+  text-decoration-color: #0c0e13;
 }
 
 main article section.boxes {
   display: inline-grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(2, minmax(42%,1fr));
   grid-column-gap: 2.5em;
   padding: 0.5em;
 }
 
 main article section.boxes h2 {
-  background-color: #1b202a;
-  color: rgba(255, 255, 255, 0.8);;
+  background-color: #0c0e13;
+  color: #fff;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   text-align: center;
@@ -177,6 +179,11 @@ main article footer.post-meta ul.taglist li {
 footer #copywrite, footer nav {
   text-align: center;
 }
+
+footer svg {
+  fill: #fff;
+}
+
 footer nav {
   margin: 1rem 5%;
   display: flex;
@@ -185,12 +192,12 @@ footer nav {
 }
 footer nav a {
   color: white;
-  border-bottom: 2px #46d200 solid;
 }
-footer nav a:hover {
+footer nav a:hover, svg:hover {
   color: #46d200;
-  border-bottom-color: white;
+  fill: #46d200;
 }
+
 footer #copywrite {
   font-size: 90%;
 }
