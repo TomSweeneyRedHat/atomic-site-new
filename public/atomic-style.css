@@ -142,7 +142,7 @@ main article.archive a:hover {
 
 main article section.boxes {
   display: inline-grid;
-  grid-template-columns: repeat(2, minmax(42%,1fr));
+  grid-template-columns: 1fr;
   grid-column-gap: 2.5em;
   padding: 0.5em;
 }
@@ -203,6 +203,9 @@ footer #copywrite {
 }
 
 @media (min-width: 420px) {
+  main article section.boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
   header {
     display: grid;
     grid-template-columns: 220px 1fr;
