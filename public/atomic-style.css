@@ -39,16 +39,24 @@ svg {
 
 hr {
   margin: 0;
-  border: 1px #0c0e13 solid;
+  border-bottom: 1px #0c0e13 groove;
 }
 
 pre, code {
   background: #0c0e13;
-  color: white;
+  color: #fff;
   font-family: 'Overpass Mono', monospace;
-  font-size: 80%;
   vertical-align: middle;
-  padding: 1px 0.5rem;
+  padding: 0.3rem 0.3rem;
+  border: 1px #ccc inset;
+  font-size: 85%;
+}
+
+pre code {
+  font-size: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 li {
@@ -65,6 +73,14 @@ h1, h2, h3, h4, h5 {
 
 p {
   margin: 0.75rem 0 0 0;
+}
+
+i, em {
+  font-style: oblique;
+}
+
+b, strong {
+  font-weight: bold;
 }
 
 header {
@@ -85,11 +101,12 @@ header nav a {
   padding: 0.2rem 0;
 }
 header nav a:hover {
-  transition: background-color 0.2s ease-in;
+  transition: background-color 200ms ease-in;
   background: #46d200;
 }
 header #atomic-logo {
   margin: 0 auto;
+  text-align: center;
 }
 
 main article {
@@ -100,6 +117,15 @@ main article {
   padding: 1rem;
 }
 
+section#banner {
+  font-size: 250%;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 900;
+  padding: 1em 0 0.3em 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 h1 {
   font-size: 210%;
   font-weight: 700;
@@ -107,31 +133,16 @@ h1 {
 }
 
 main article a {
-  border-bottom: 2px #46d200 solid;
+  border-bottom: 2px solid #46d200;
 }
 
-main article a:hover {
-  border-color: #0c0e13;
-}
-
-main article a::before, main article ul.taglist li a::before {
-  font-size: 0.7rem;
-  content: "\2192";
-  color: #46d200;
-}
-
-main article h1 a::before, main article h2 a::before, main article h3 a::before, main article h4 a::before, main article h5 a::before, main article li a::before {
-  content: "";
-}
-
-main article a:hover::before {
-  color: #0c0e13;
-  transition: color 300ms ease-in;
+main article a:hover, main article a:hover svg.icon {
+  border: none;
+  fill: #46d200;
 }
 
 main article.archive a {
   display: block;
-  line-height: 1.5rem;
   border: 0;
   text-decoration: #46d200 underline;
 }
@@ -193,59 +204,34 @@ footer nav {
 footer nav a {
   color: white;
 }
+
 footer nav a:hover, footer nav a:hover svg.icon {
   color: #46d200;
   fill: #46d200;
 }
 
 footer #copywrite {
-  font-size: 90%;
+  font-size: 80%;
 }
 
+/* responsiveness */
 @media (min-width: 420px) {
-  main article section.boxes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  header {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    align-items: center;
-  }
-
-  header nav {
-    margin-top: 0;
-  }
+  main article section.boxes {grid-template-columns: repeat(2, 1fr);}
+  header {display: grid; grid-template-columns: 220px 1fr; align-items: center;}
+  header nav {margin-top: 0;}
 }
 
 @media (min-width: 680px) {
-  header {
-    display: block;
-  }
-
-  header nav {
-    margin-top: 1rem;
-  }
-
-  .wrapper {
-    margin: 1rem;
-    grid-template-columns: 220px 1fr;
-    grid-column-gap: 1rem;
-  }
+  header {display: block;}
+  header nav {margin-top: 1rem;}
+  .wrapper {margin: 1rem; grid-template-columns: 220px 1fr; grid-column-gap: 1rem;}
 }
 
 @media (min-width: 950px) {
-  .wrapper {
-    margin: 0 12%;
-    grid-column-gap: 5%;
-  }
-
-  header nav {
-    margin-top: 2rem;
-  }
+  .wrapper {margin: 0 12%; grid-column-gap: 5%;}
+  header nav {margin-top: 2rem;}
 }
 
 @media (max-width: 350px) {
-  li {
-    font-size: 80%;
-  }
+  li {font-size: 80%;}
 }

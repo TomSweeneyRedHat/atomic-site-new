@@ -2,26 +2,28 @@
 {{define "title"}}Project Atomic{{end}}
 
 {{define "body"}}
-  <h1>
-  Deploy and Manage Your Containers<br>
-  in the Next-Generation Container OS
-  </h1>
-  <p>Use immutable infrastructure to deploy and scale your containerized
-  applications. Project Atomic mainly comprises <strong>Atomic Host, Atomic Workstation,</strong> and various <strong>container tooling</strong>.</p>
+  <section id="banner">
+    Deploy and Manage Your Containers<br>
+    in the Next-Generation Container OS
+  </section>
 
 <article>
 <section class="boxes">
 
 <section>
   <h2>Atomic Host</h2>
-  Atomic Host (AH) provides immutable infrastructure for deploying to hundreds or thousands of servers in your private or public cloud. Available in <b>Fedora Atomic Host,</b><b>CentOS Atomic Host,</b> <b>and Red Hat Atomic Host</b> editions depending on your platform and support needs.</p>
+  <p>Atomic Host <i>(AH)</i> is a container-based operating system that allows for secure updates and rollbacks. It provides immutable infrastructure for deploying to hundreds or thousands of servers in your private or public cloud. Available in <strong>Fedora Atomic Host,</strong> <strong>CentOS Atomic Host</strong>, and <strong>Red Hat Atomic Host</strong> editions depending on your platform and support needs.</p>
   <p>To balance the need between long-term stability and new features, we are providing different releases of Atomic Host for you to choose from.</p>
-  <p><a href='/download'><svg><use href="/public/svg-sprites.svg#download" /></svg>Get Started</a></p>
+  <p><a href="/docs"><svg class="icon"><use href="/public/svg-sprites.svg#graduation-cap" /></svg>Learn More</a><br>
+  <a href="https://getfedora.org/atomic/download/"><svg><use href="/public/svg-sprites.svg#download" /></svg>Download Fedora Atomic Host</a></p>
 </section>
 
 <section>
   <h2>Atomic Workstation</h2>
-  Fedora Atomic Workstation (FAW) provides immutable infrastructure for your desktop experience.
+  <p>Fedora Atomic Workstation (FAW) is the desktop version of Atomic Host - if you need a container-based operating system <i>(OS)</i> that will give you atomic rollbacks, you're in the right place. Immutable infrastructure for your desktop experience - if you want to know, what all this means, head to the <a href="/docs">documentation</a>. Fedora Atomic Workstation is still heavily in development with only few external users.</p>
+  <p>This project is actively maintained and is ready for use by sophisticated and interested users, but not ready for widespread promotion.</p>
+  <p><a href="/docs"><svg class="icon"><use href="/public/svg-sprites.svg#graduation-cap" /></svg>Learn More</a><br>
+  <a href="https://download.fedoraproject.org/pub/fedora/linux/releases/27/WorkstationOstree/x86_64/iso/"><svg><use href="/public/svg-sprites.svg#download" /></svg>Download Fedora Atomic Workstation</a></p>
 </section>
 
 <section>
